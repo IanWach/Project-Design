@@ -16,6 +16,50 @@ body {
   display: flex;
   flex-direction: row;
 }
+/*The Header and Navbar*/
+
+.navbar { background-color: rgb(28, 0, 128); }
+.navbar .navbar-nav .nav-link { color: rgb(255, 0, 170) }
+.navbar .navbar-nav .nav-link:hover { color: #fbc531; }
+.navbar .navbar-nav .active > .nav-link { color: #fbc531; }
+
+.fa-lg {
+  font-size: 2em;
+}
+
+/* Banner */
+
+.banner{
+ position: absolute;
+}
+
+/* Phone */
+.phone{
+  position: relative;
+  top: 130px;
+  right: -770px;
+}
+
+.phone {
+  animation-name: device;
+  animation-duration: 5s;}
+
+@keyframes device {
+  10% { right: -770px}
+  20% { right: -790px}
+  30%{ right: -840px}  
+  40%{ right: -885px}
+  50%{ right: -915px}
+  55%{right: -950px;}
+  60% { right: -950px}
+  70% { right: -915px}
+  77%{ right: -885px}  
+  85%{ right: -840px}
+  93%{right: -805px;}
+  100%{ right: -770px}
+
+}
+
 
 /**
 * ! style rules for content section
@@ -25,7 +69,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #f2796e;
+  background-color: rgba(255, 0, 170, 0.541);
   width: 55%;
   min-height: 100vh;
   padding: 10px 20px;

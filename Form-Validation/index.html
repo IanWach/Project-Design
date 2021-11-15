@@ -16,9 +16,9 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
 <link href="bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header style="margin-top: -60px;">
   <!--- Navbar --->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" style="padding: 25px 0px; width: 100%";>
 
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#"><i class="fa fa-laptop fa-lg mr-1"></i><img src="images/Logo2.svg" alt="Peep Logo" /></a>
@@ -66,18 +66,38 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
   <!--# Navbar #-->
   </header>
 
-        <div class="row">
-            <object class="banner" style=" margin-bottom: 0;" data="./images/Banner/Travel Landing Page (Community).svg" width="810vw"> </object>
-            <object class="phone" data="./images/Phone/Design.svg" width="550" height="500"> </object>
+        <div class="row" style="padding-left: 20px;">
+            <div style=" position:relative; background-image: url(images/BackgroundTech.jpg); background-size:cover; height: 40em; width: 400vw;">
+                    <div style="position:absolute;
+                    top:0;
+                    right:0;
+                      width: 100%;
+                      height: 100%; -webkit-clip-path: polygon(0 0, 80% 0, 35% 50%, 0 12%); clip-path: circle(30.0% at 99% 50%);  background-image: url(images/BackgroundTech.jpg);">
+                    </div>
+                <div>
+
+                    <span  style="position: absolute; top: 50%; left: 40%; transform: translate(-50%, -50%)">
+                        <h2 style="position: absolute; top: 50%; left: 45%; transform: translate(-50%, -50%)">
+                            <i class="fa fa-mobile" style="font-size: 150px;">PEEP Technologies</i>
+                        </h2> 
+                            <h3 class="text-primary display-5">Your Peace of Mind Matters</h3>
+                    </span>
+                    <div style=" border: 5px red;"></div>
+
+
+                </div>
+            </div><!-- <object class="banner" style="  margin-bottom: 0;" data="./images/Banner/Travel Landing Page (Community).svg" width="810vw"> </object> -->
+            <!-- <div style="clip-path: circle(30.0% at 99% 50%); "> <img style="width:60vw; float: right;" src = "images/Banner Clip.jpg"> </div> -->
+            <!-- <object class="phone" data="./images/Phone/Design.svg" width="550" height="500"> </object> -->
        </div>
     
-       <section style="display: flex; ">
+       <section style="display: flex; margin-top: 20px;">
             <div style="flex-basis: 50%;">   
-                <img class="img-responsive" style="height: 0; min-height: 500px; width: 660px;  display: block;" src="images/About.jpg"/>
+                <img class="img-responsive" style="height: 0; min-height: 500px; width: 710px;  display: block;" src="images/About.jpg"/>
             </div>    
             <div  style="background-color: rgb(78, 6, 136); flex-basis: 50%;">
                 <h2 style=" margin:10px 0px 30px 30px; font-size: 50px; color: rgb(253, 249, 0);">About Peep Technologies</h2> 
-                <p style=" margin:10px 0px 50px 30px; font-size: 20px; padding:0px 100px 10px 20px; color: rgba(253, 0, 156, 0.808);" >This is an About Us Section Qui tempore enim commode laboris minim et et nulla. Labore nostrud magna enim nulla dolore eiusmod sunt veniam esse et ipsum enim elit. Nisi exercitation Lorem sint minim non laboris veniam Lorem laboris mollit culpa voluptate laboris. Dolor nisi labore nulla labore mollit. Proident enim enim cillum amet nostrud non elit mollit ut. Sint quis qui sunt veniam cupidatat officia tempor in Lorem pariatur. Amet deserunt deserunt reprehenderit esse exercitation reprehenderit dolor ad ea adipisicing proident.</p>
+                <p style=" margin:10px 0px 50px 30px; font-size: 17px; padding:0px 70px 10px 20px; color: rgba(253, 0, 156, 0.808);" >This is an About Us Section Qui tempore enim commode laboris minim et et nulla. Labore nostrud magna enim nulla dolore eiusmod sunt veniam esse et ipsum enim elit. Nisi exercitation Lorem sint minim non laboris veniam Lorem laboris mollit culpa voluptate laboris. Dolor nisi labore nulla labore mollit. Proident enim enim cillum amet nostrud non elit mollit ut. Sint quis qui sunt veniam cupidatat officia tempor in Lorem pariatur. Amet deserunt deserunt reprehenderit esse exercitation reprehenderit dolor ad ea adipisicing proident.</p>
             </div>    
         </section>
         
@@ -159,7 +179,7 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <svg class="bd-placeholder-img" src ="/images/Sample.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                    <svg class="bd-placeholder-img" src ="./images/Sample.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
         
                     <div class="container">
                         <div class="carousel-caption text-start">
@@ -202,19 +222,17 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
                 </button>
             </div></div>
         </section>
-       
-        <div class="b-example-divider"></div>
-        
-        <h2 class="pb-2 border-bottom">Peep Technologies Products</h2><div class="container px-4 py-5" id="custom-cards">
-            
+        <h2 class="pb-2 border-bottom">Peep Technologies Products</h2>  
+        <div class="container px-4 py-5" id="custom-cards">
+          
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
               <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('images/unsplash-photo-1.jpg');">
                   <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                     <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
                     <ul class="d-flex list-unstyled mt-auto">
                       <li class="me-auto">
-                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        <img src="images/Banner/Travel Landing Page (Community)@3x.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                       </li>
                       <li class="d-flex align-items-center me-3">
                         <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
@@ -235,7 +253,7 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
                     <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
                     <ul class="d-flex list-unstyled mt-auto">
                       <li class="me-auto">
-                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        <img src="images/Banner/Travel Landing Page (Community)@2x.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-pink">
                       </li>
                       <li class="d-flex align-items-center me-3">
                         <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
@@ -256,7 +274,7 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
                     <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
                     <ul class="d-flex list-unstyled mt-auto">
                       <li class="me-auto">
-                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        <img src="images/Banner/Travel Landing Page (Community)@2x.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                       </li>
                       <li class="d-flex align-items-center me-3">
                         <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>

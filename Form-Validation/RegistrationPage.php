@@ -1,6 +1,7 @@
 <?php 
-  $error =NULL;
-  if (isset ($_POST["submit"])){
+
+ $error =NULL;
+  if (isset ($_POST['submit'])){
 
 
     //Get From data
@@ -8,31 +9,48 @@
      $mail  = $_POST['email'];
      $pass = $_POST['password'];
      $confirm = $_POST['confirm'];
+
+     
+    
  
      if(strlen ($user) < 5 ){
        $error = " Your Username must be at least 5 characters";
+       echo $error;
        }
        elseif($pass!=$confirm){
          $error ="The passwords do not match";
+         echo $error;
        }
        else{
          //Form is Valid
  
          //Connect to Database
+         $db_name="peep";
  
-         $mysqli = NEW MySQLi ('localhost','root','test');
+        $mysqli =NEW mysqli ('localhost','root','',$db_name) or die ("error:".mysqli_error($mysqli));
  
          //Clean Data
          $user = $mysqli->real_escape_string($user);
          $mail = $mysqli->real_escape_string($mail);
          $pass = $mysqli->real_escape_string($pass);
          $confirm = $mysqli->real_escape_string($confirm);
+         
+   
  
          //generate key
          $key = md5( time ().$user);
+         $insert=mysqli_query($mysqli,"insert into login  values ('','$user','$mail','$pass','$key') ") or die (mysqli_error($mysqli));
+        
+         $success=mysqli_query($mysqli,$insert);
+         if($insert){
+           echo "Successfully inserted";
+         }
+         else{
+           echo "FAILED";
+         }
  
          echo $key;
-         echo "This is is isss nnn hhj hmhmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm";
+         
        }
   }
 ?> 
@@ -63,7 +81,7 @@
           attractive offers today !
         </div>
       </div>
-      <form id="form" action="script.php">
+      <form  action="RegistrationPage.php" method="POST" >
         <div class="social">
           <div class="title">Get Started</div>
           <div class="question">
@@ -160,12 +178,13 @@
           </div>
   
 
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" name="submit" id="submit">Submit</button>
         <h3 style="padding: 30px;"><a style= "color: rgb(11, 103, 241); text-decoration: none" href='login.html'>Have an account?</a></h3>
       </form> 
     </div>
     <?php 
-      echo $error;
+    echo $error;
+  //echo "heloo 1";
     ?>
   </body>
   <script src="main.js"></script>
